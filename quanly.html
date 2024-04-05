@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/99f6efc0d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css"/>
+    
+</head>
+<body >
+    <section class="header">
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <a class="rtb" href="camket.html" target="_blank" rel="noreferrer">Cam kết hoàn 150% nếu nhà xe không giữ vé</a>
+        </div>
+        <ul class="header-right">
+            <li class="quanly">
+                <a href="quanly.html" class="qldh">Quản lý đơn hàng</a>
+            </li>
+            <li class="moban">
+                <a href="moban.html" class="mbvx">Mở bán vé trên Vexere</a>
+            </li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown()">Trở thành đối tác ▼</a>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Phần mềm nhà xe</a>
+                    <a href="#">Phần mềm đại lý</a>
+                </div>
+            </li>
+            <li class="hotline">
+                <button id="hotlineButton">Hotline 24/7</button>
+                <div id="hotlineOptions" class="hotline-content">
+                    <p>1900969681 - Để phản hồi về dịch vụ và xử lý sự cố</p>
+                    <p>1900888684 - Để đặt vé qua điện thoại</p>
+                    <p>1900 6484 - Để được hỗ trợ về vé máy bay và tàu hỏa</p>
+                </div>
+            </li>
+            <li class="login">
+                <button id="loginButton" onclick="location.href='login.html';">Đăng nhập</button>
+            </li>
+        </ul>
+    </section>
+
+
+    <div class="container">
+        <div class="left-side">
+            <h1>Tăng 30% lượng khách đặt vé khi mở bán online trên Vexere.com ngay hôm nay!</h1>
+            <p>Đăng ký miễn phí và chỉ mất 1 phút để hoàn tất</p>
+        </div>
+        <div class="right-side">
+            <div class="form-box">
+                <h2>Bắt đầu lấp đầy chỗ trống trên xe của bạn với hơn 10 triệu lượt khách đi thành công trên Vexere</h2>
+                <form>
+                    <input type="text" id="fullName" placeholder="Họ và tên" required>
+                    <input type="text" id="phoneNumber" placeholder="Số điện thoại liên hệ" required>
+                    <input type="email" id="email" placeholder="Email">
+                    <input type="text" id="busCompany" placeholder="Tên hãng xe">
+                    <input type="text" id="cityRoute" placeholder="Tỉnh (Thành phố) / Tuyến đường" required>
+                    <textarea id="consultationContent" placeholder="Nội dung tư vấn"></textarea>
+                    <button type="submit" class="register-btn">ĐĂNG KÝ MỞ BÁN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+ 
+    <script src="script.js"></script>
+</body>
+</html>

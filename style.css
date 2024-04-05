@@ -1,0 +1,510 @@
+
+    *{
+        margin:0;
+    }
+
+    .header {
+        background-color: #207cd7; /* Màu nền header */
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        
+    }
+.header-left a,
+.header-right a {
+    text-decoration: none;
+    color: inherit; /* Đảm bảo màu chữ không bị thay đổi */
+}
+    .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 50px; /* Điều chỉnh kích thước logo */
+    }
+
+    .header-left .rtb {
+        margin-left: 20px;
+        display: inline-block; /* Để text và logo cùng hàng */
+        /* text-decoration: none; */
+        color:#fff;
+    }
+
+    .header-right {
+        display: flex;
+        list-style-type: none;
+    }
+    .header-right .quanly,
+    .header-right .moban,
+    .header-right .doitac{
+        text-decoration: none;
+    }
+
+    .header-right li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    /* .dropdown-content {
+        display: none;
+        position: absolute;
+        top:100%;
+        left:0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    } */
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .show {
+        display: block;
+    }
+
+    .dropdown-content {
+        top: 100%; /* Đặt nó ngay dưới nút dropdown */
+        left: 0; /* Căn trái */
+    }
+    
+    /* Đối với hotline, bạn có thể muốn căn nó về phía bên phải */
+    .hotline-content {
+        top: 100%; /* Đặt nó ngay dưới nút hotline */
+        right: 0; /* Căn phải */
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .hotline-content {
+        display: none; /* Ẩn mặc định */
+        position: absolute;
+        right: 0; /* Đặt bên phải nút hotline */
+        top: 40px; /* Đặt dưới nút hotline */
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        padding: 10px;
+        z-index: 1000; /* Đảm bảo nó hiển thị trên các phần tử khác */
+        width: 300px; /* Đặt chiều rộng cố định */
+    }
+    .dropdown, .hotline {
+        position: relative; /* Điều này cho phép các dropdown-content căn đúng vị trí */
+    }
+
+
+    /* CSS cho nút và các mục liên quan */
+    button {
+        position: relative;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .hotline-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        margin: 0;
+        border: none;
+        cursor: pointer;
+        position: relative; /* Định vị tương đối cho vị trí của dropdown */
+    }
+    #hotlineOptions {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 10px;
+        border-radius: 4px;
+        right: 0; /* Đặt nó về phía bên phải của nút hotline */
+        width: 300px; /* hoặc bất kỳ chiều rộng nào bạn muốn */
+        z-index: 100; /* đảm bảo nó hiển thị trên cùng */
+    }
+    
+    /* Style khi hotlineOptions hiển thị */
+    .show {
+        display: block;
+    }
+.hero {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-image: url('img/hero.jpg');
+        background-size: cover; /* Hiển thị hình ảnh sao cho nó che phủ toàn bộ phần tử #hero */
+        background-position: center; /* Căn chỉnh hình ảnh theo trung tâm */
+        height: 450px; /* Điều chỉnh chiều cao của phần #hero theo nhu cầu */
+        
+}
+
+.hero .hoantien{
+    background-color: transparent;
+    color:#fff;
+    font-size: 40px;
+}
+/* ////////////////////////////////// */
+#product1 {
+    text-align: center;
+    margin-top:20px ;
+
+}
+.product-wrapper {
+    position: relative; 
+    margin-left: 14%; /* Cách lề bên trái 30px */
+    margin-right: 14%; /* Cách lề bên phải 30px */
+}
+
+#product1 .pro-container {
+    display: flex; /* Hiển thị các phần tử con trên cùng một hàng */
+    justify-content: space-between; /* Căn các phần tử con về hai bên */
+    /* padding-top: 20px; */
+    /* overflow:hidden; */
+    overflow-x: auto;
+}
+
+#product1 .pro {
+    display: inline-block; /* Thay đổi kiểu hiển thị thành inline-block */
+    width: 0; /* Chiều rộng của mỗi phần tử .pro */
+    /* min-width: 250px; */
+    padding: 0; /* Loại bỏ padding */
+    border: none; /* Loại bỏ border */
+    margin:15px 13px; /* Loại bỏ margin */
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    transition: 0.2s ease;
+    position: relative;
+}
+ 
+#product1 p {
+    background-image: url('img/background.png');
+    font-size: 30px;;
+    display: block;
+    text-align:center; /* Đảm bảo văn bản nằm ở bên trái */
+    margin-top: 0; /* Loại bỏ margin đầu dòng mặc định */
+    /* margin-bottom: 10px; Tạo khoảng cách dưới cho thẻ <p> */
+    border-radius: 20px;
+}
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(255, 0, 0, 0.06);
+}
+
+#product1 .pro img {
+    width: 100%;
+  height: 170px; 
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 4px 4px 0px 0px;
+}
+
+
+#product1 .pro .des {
+    text-align: left;
+}
+
+#product1 .pro .des h5 {
+    padding-top: 7px;
+    color: #000000;
+    font-size: 14px;
+}
+
+#product1 .pro .des h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #c64444;
+}
+
+/* Thêm CSS cho nút lướt qua */
+/* Thêm CSS cho nút lướt qua */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 100; /* Đảm bảo nút hiển thị trên các phần tử khác */
+    font-size: 24px;
+}
+
+.scroll-button.prev {
+    left: 10px;
+}
+
+.scroll-button.next {
+    right: 10px;
+}
+/* .pro-container button{
+    background-color: transparent;
+
+} */
+
+.scroll-button.prev,
+.scroll-button.next {
+    background: none; /* Loại bỏ hình nền */
+}
+/* ///////////////////////////////// */
+.pro-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Cho phép cuộn mượt mà */
+}
+
+.pro {
+    min-width: 300px; /* Hoặc bất kỳ chiều rộng nào bạn muốn cho mỗi sản phẩm */
+    margin-right: 10px; /* Khoảng cách giữa các sản phẩm */
+}
+
+
+/* ///////////////////////////////////////// */
+footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .col{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+footer .logo{
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+footer p{
+    font-size: 13px;
+    margin:0 0 8px 0;
+}
+footer a{
+    font-size: 13px;
+    text-decoration: none;
+    color:#222;
+    margin-bottom: 10px;
+}
+footer .follow {
+    margin-top: 20px;
+}
+footer .follow i{
+    color:#465b52;
+    padding-right: 4px;
+    cursor:pointer;
+}
+footer .install .row img{
+    border:1px solid #272525;
+    border-radius: 6px;
+}
+footer .install img{
+    margin:10px 0 15px 0;
+}
+footer .follow i:hover,
+footer a:hover{
+    color:#c64444;
+}
+/* ///////////quanly.html/////////////// */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.note {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #333;
+    border-left: 4px solid #007bff;
+}
+/* //////////////moban.html///////////// */
+.split-layout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left-side {
+    background-color: #0056b3;
+    color: white;
+    padding: 50px;
+    width: 50%;
+}
+
+.right-side {
+    background-color: white;
+    padding: 50px;
+    width: 50%;
+}
+
+h1, h2 {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 120px;
+}
+
+.register-btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #cc5656;
+}
+
+/* Responsive layout */
+@media (max-width: 960px) {
+    .split-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-side, .right-side {
+        width: 90%;
+    }
+}
+/* ////////////////////// */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff; /* White background */
+    padding: 20px 0;
+  }
+  
+  .info-column {
+    width: calc(33.333% - 40px); /* Divide by three and subtract some margin */
+    margin: 20px; /* Add some space around the columns */
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .info-column img {
+    max-width: 100px; /* Set a maximum width for icons */
+    margin-bottom: 15px; /* Space between icon and title */
+  }
+  
+  .info-column h3 {
+    color: #333; /* Dark grey color for the title */
+    font-size: 1.2em; /* Slightly larger font size for the title */
+    margin-bottom: 10px; /* Space between title and paragraph */
+  }
+  
+  .info-column p {
+    color: #666; /* Lighter grey color for the paragraph */
+    font-size: 0.9em; /* Smaller font size for the paragraph */
+    line-height: 1.6; /* Adjust line spacing for better readability */
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 1024px) {
+    .info-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-column {
+      width: 80%; /* Full width on smaller screens */
+      margin-bottom: 20px; /* More space at the bottom of each column */
+    }
+  }
+  
+  /* Ensure images don't exceed their container width */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
